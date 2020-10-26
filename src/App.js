@@ -84,7 +84,7 @@ class App extends React.Component {
     return (
       <div className="main">
         <h1>To-Do Basic</h1>
-        <TodoForm addItem={this.addItem}></TodoForm> <a className="button" onClick={this.removeCompleted}>Clear Completed</a>
+        <TodoForm addItem={this.addItem}></TodoForm> <span className="button" onClick={this.removeCompleted}>Clear Completed</span>
         <TodoList onClick={this.onClick} allTodos={this.state.allTodos}></TodoList>
 
       </div>

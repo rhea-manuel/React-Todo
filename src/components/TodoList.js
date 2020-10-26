@@ -6,10 +6,6 @@ import Todo from './Todo'
 
 class TodoList extends React.Component {
 
-    constructor() {
-        super()
-    }
-
     render() {
         return (
             <div className="list">
