@@ -197,6 +197,11 @@ form button{
         justify-content: center;
     }
 
+    .main{
+        width: 100%;
+        padding: 8%;
+    }
+
     .list{
         margin-top: 10%;
         width: 100%;
