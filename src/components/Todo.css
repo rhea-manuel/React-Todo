@@ -1,3 +1,161 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+/* CUSTOM STYLES */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+
+html{
+    background: rgb(65,201,162) fixed;
+    background: -moz-linear-gradient(180deg, rgba(65,201,162,1) 0%, rgba(24,91,157,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(65,201,162,1) 0%, rgba(24,91,157,1) 100%);
+    background: linear-gradient(180deg, rgba(65,201,162,1) 0%, rgba(24,91,157,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41c9a2",endColorstr="#185b9d",GradientType=1);  
+    background-size: cover;
+    min-height: 100%;
+}
+
+body{
+    font-family: 'Mulish';
+    color: #FDF3E6;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 800;
+    padding-bottom: 2%;
+}
+
+form div{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+label{
+    height:300px;
+}
+
+form input{
+    background: #2A9D8F;
+    border: none;
+    width: 200px;
+    height: 100%;
+    color: #FDF3E6;
+    font-family: 'Mulish';
+    font-size: 1.1rem;
+    padding: .5% .5%;
+}
+
+.item{
+    background: #2A9D8F;
+}
+
+.list{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-top: 2%;
+    width: 65%;
+    flex-wrap: wrap;
+}
+
+.list span{
+    display: inline-block;
+    width: 45%;
+    padding: 2%;
+    margin-bottom: 3%;
+}
+
+.completed{
+    background: #D3D3D355;
+    color: #FDF3E699;
+}
+
+form button{
+    height: 100%;
+    width: 100px;
+}
+
+.main a {
+    width: 300px;
+    margin: 0 auto;
+    padding: 1%;
+    margin-top: 1%;
+}
+
+.button{
+    background: #FDF3E6;
+    border: none;
+    outline: none;
+    margin: 0;
+    color: #2A9D8F;
+    
+}
+
+.main{
+    width:90%;
+    background: #264653;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 2%;
+    height: 100vh;
+    overflow-y: auto;
+}
+
 .item{
     cursor: pointer;
 }

@@ -3,7 +3,7 @@ import Todo from './Todo'
 
 class TodoForm extends React.Component {
 
-    constructor(){
+    constructor() {
         super()
         this.state = {
             input: ''
@@ -20,19 +20,20 @@ class TodoForm extends React.Component {
     submit = (event) => {
         event.preventDefault()
 
-        this.props.addItem(this.state.input)
+        if (this.state.input.trim()) {
 
+            this.props.addItem(this.state.input)
+        }
     }
 
     render() {
 
         return (
             <form onSubmit={this.submit}>
-                <label>
-                    Item Name
-                    <input value={this.state.input} onChange={this.updateState} name="item"></input>
-                </label>
-                <button>Add</button>
+                <div>
+                    <input name="task" aria-label="Task name" value={this.state.input} onChange={this.updateState} name="item"></input>
+                    <button className="button">Add</button>
+                </div>
             </form>
         )
     }

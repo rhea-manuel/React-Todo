@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Todo.css"
+
 
 class Todo extends React.Component {
 
@@ -14,7 +14,7 @@ class Todo extends React.Component {
 
     render() {
         return (
-            <li onClick={this.handleClick} className={this.props.completed ? "item completed" : "item incomplete"} >{this.props.name} </li>
+            <span onClick={this.handleClick} className={this.props.completed ? "item completed" : "item incomplete"} >{this.props.name} </span>
         )
     }
 }

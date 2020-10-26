@@ -12,15 +12,15 @@ class TodoList extends React.Component {
 
     render() {
         return (
-            <ul>
-                <ul>
+            <div className="list">
+
                     {
                         this.props.allTodos.map((item) => {
                             return (<Todo onClick={this.props.onClick} completed={item.completed} name={item.name} id={item.id}></Todo>)
                         })
                     }
-                </ul>
-            </ul>
+
+            </div>
         )
     }
 }

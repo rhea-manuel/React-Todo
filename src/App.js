@@ -2,6 +2,8 @@ import React from 'react';
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
 
+import "./components/Todo.css"
+
 class TodoObj {
   constructor(name, id, completed) {
     this.name = name
@@ -39,10 +41,20 @@ class App extends React.Component {
     })
   }
 
+  removeCompleted = () => {
+    let curList = this.state.allTodos.filter((item)=>{
+      return !item.completed
+    })
+
+    this.setState({
+      allTodos: curList
+    })
+  }
+
 
   addItem = (itemName) => {
     let curList = [...this.state.allTodos]
-    const item = new TodoObj(itemName, curList.length, false)
+    const item = new TodoObj(itemName, Date.now(), false)
     curList.push(item)
     this.setState({
       allTodos: curList
@@ -51,10 +63,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <TodoForm addItem={this.addItem}></TodoForm>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="main">
+        <h1>To-Do Basic</h1>
+        <TodoForm addItem={this.addItem}></TodoForm> <a className="button" onClick={this.removeCompleted}>Clear Completed</a>
         <TodoList onClick={this.onClick} allTodos={this.state.allTodos}></TodoList>
+        
       </div>
     );
   }
