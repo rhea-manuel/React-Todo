@@ -24,6 +24,18 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    const todos = localStorage.getItem('data')
+
+
+    if (todos){
+      const todoObj = JSON.parse(todos)
+      this.setState ({
+        allTodos: todoObj
+      })
+    }
+  }
+
   onClick = (id) => {
     const curList = this.state.allTodos.map((item) => {
 
@@ -39,16 +51,21 @@ class App extends React.Component {
     this.setState({
       allTodos: curList
     })
+
+
+    localStorage.setItem('data', JSON.stringify(curList))
   }
 
   removeCompleted = () => {
-    let curList = this.state.allTodos.filter((item)=>{
+    let curList = this.state.allTodos.filter((item) => {
       return !item.completed
     })
 
     this.setState({
       allTodos: curList
     })
+
+    localStorage.setItem('data', JSON.stringify(curList))
   }
 
 
@@ -59,6 +76,8 @@ class App extends React.Component {
     this.setState({
       allTodos: curList
     })
+
+    localStorage.setItem('data', JSON.stringify(curList))
   }
 
   render() {
@@ -67,7 +86,7 @@ class App extends React.Component {
         <h1>To-Do Basic</h1>
         <TodoForm addItem={this.addItem}></TodoForm> <a className="button" onClick={this.removeCompleted}>Clear Completed</a>
         <TodoList onClick={this.onClick} allTodos={this.state.allTodos}></TodoList>
-        
+
       </div>
     );
   }
