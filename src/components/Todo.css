@@ -1,0 +1,11 @@
+.item{
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.incomplete{
+    text-decoration: none;
+}
