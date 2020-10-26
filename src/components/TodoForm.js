@@ -33,7 +33,7 @@ class TodoForm extends React.Component {
         return (
             <form onSubmit={this.submit}>
                 <div>
-                    <input name="task" aria-label="Task name" value={this.state.input} onChange={this.updateState} name="item"></input>
+                    <input name="task" aria-label="Task name" value={this.state.input} onChange={this.updateState}></input>
                     <button className="button">Add</button>
                 </div>
             </form>
