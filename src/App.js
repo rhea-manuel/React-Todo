@@ -20,7 +20,7 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      allTodos: [new TodoObj('name', 5, false)]
+      allTodos: []
     }
   }
 
